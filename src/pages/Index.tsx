@@ -183,22 +183,22 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-hero-gradient">
+      <section className="py-16 md:py-24 bg-muted/30 border-t border-border">
         <Container>
           <div className="text-center space-y-8 max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-white">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground">
               Ready to Transform Your Business?
             </h2>
-            <p className="text-xl text-white/90 leading-relaxed">
-              Join 200+ companies that have achieved breakthrough results with ConsultCo. Let's discuss your growth objectives.
+            <p className="text-xl text-muted-foreground leading-relaxed">
+              Join 200+ companies that have achieved breakthrough results with ConsultCo. Let&apos;s discuss your growth objectives.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild variant="secondary" size="lg">
+              <Button asChild variant="hero" size="lg">
                 <Link to="/contact">
                   Start Your Transformation <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="bg-white/10 border-white/20 text-white hover:bg-white/20">
+              <Button asChild variant="outline" size="lg">
                 <Link to="/sections">
                   Explore Our Expertise
                 </Link>
@@ -210,5 +210,4 @@ const Index = () => {
     </div>
   );
 };
-
 export default Index;

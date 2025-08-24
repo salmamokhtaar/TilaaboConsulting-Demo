@@ -7,31 +7,31 @@ export const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-primary text-primary-foreground">
+    <footer className="bg-muted/30 border-t border-border">
       <Container>
         <div className="py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* About */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <div className="h-8 w-8 bg-secondary rounded-lg flex items-center justify-center">
-                <span className="text-primary font-bold text-sm">C</span>
+              <div className="h-8 w-8 bg-primary rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-sm">C</span>
               </div>
-              <span className="text-xl font-bold">{company.name}</span>
+              <span className="text-xl font-bold text-foreground">{company.name}</span>
             </div>
-            <p className="text-primary-foreground/80 text-sm max-w-sm">
+            <p className="text-muted-foreground text-sm max-w-sm">
               {company.description}
             </p>
           </div>
 
           {/* Quick Links */}
           <div className="space-y-4">
-            <h3 className="font-semibold">Quick Links</h3>
+            <h3 className="font-semibold text-foreground">Quick Links</h3>
             <nav className="space-y-2">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   to={item.href}
-                  className="block text-sm text-primary-foreground/80 hover:text-secondary transition-colors"
+                  className="block text-sm text-muted-foreground hover:text-primary transition-colors"
                 >
                   {item.name}
                 </Link>
@@ -41,29 +41,29 @@ export const Footer = () => {
 
           {/* Contact Info */}
           <div className="space-y-4">
-            <h3 className="font-semibold">Contact Info</h3>
+            <h3 className="font-semibold text-foreground">Contact Info</h3>
             <div className="space-y-3">
               <div className="flex items-center space-x-3 text-sm">
-                <Mail className="h-4 w-4 text-secondary" />
+                <Mail className="h-4 w-4 text-primary" />
                 <a 
                   href={`mailto:${company.email}`}
-                  className="text-primary-foreground/80 hover:text-secondary transition-colors"
+                  className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   {company.email}
                 </a>
               </div>
               <div className="flex items-center space-x-3 text-sm">
-                <Phone className="h-4 w-4 text-secondary" />
+                <Phone className="h-4 w-4 text-primary" />
                 <a 
                   href={`tel:${company.phone}`}
-                  className="text-primary-foreground/80 hover:text-secondary transition-colors"
+                  className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   {company.phone}
                 </a>
               </div>
               <div className="flex items-start space-x-3 text-sm">
-                <MapPin className="h-4 w-4 text-secondary mt-0.5" />
-                <span className="text-primary-foreground/80">
+                <MapPin className="h-4 w-4 text-primary mt-0.5" />
+                <span className="text-muted-foreground">
                   {company.address}
                 </span>
               </div>
@@ -72,10 +72,23 @@ export const Footer = () => {
         </div>
 
         {/* Bottom */}
-        <div className="py-6 border-t border-primary-foreground/20">
-          <p className="text-center text-sm text-primary-foreground/60">
-            © {currentYear} {company.name}. All rights reserved.
-          </p>
+        <div className="py-6 border-t border-border">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-2 md:space-y-0">
+            <p className="text-sm text-muted-foreground">
+              © {currentYear} {company.name}. All rights reserved.
+            </p>
+            <p className="text-sm text-muted-foreground">
+              Developed by{" "}
+              <a 
+                href="http://salmadhegacadde.com/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-primary hover:text-primary/80 transition-colors"
+              >
+                Salma
+              </a>
+            </p>
+          </div>
         </div>
       </Container>
     </footer>
