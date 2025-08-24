@@ -45,15 +45,15 @@ const Index = () => {
 
               <div className="flex items-center space-x-8 text-sm text-muted-foreground">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-primary">200+</div>
+                  <div className="text-2xl font-bold text-primary">100+</div>
                   <div>Companies Served</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-primary">95%</div>
+                  <div className="text-2xl font-bold text-primary">99%</div>
                   <div>Client Satisfaction</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-primary">6 Weeks</div>
+                  <div className="text-2xl font-bold text-primary">4 Weeks</div>
                   <div>Avg. Time to Results</div>
                 </div>
               </div>
